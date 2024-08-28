@@ -32,6 +32,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          token: ${{ secrets.GH_ACTIONS_PAT_TOKEN }}
           submodules: recursive
       - name: Detect package manager
         id: detect-package-manager
