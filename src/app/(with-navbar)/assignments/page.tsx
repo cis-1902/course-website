@@ -1,20 +1,17 @@
-import { Metadata } from 'next';
+import { Metadata } from 'next'
 
-import Credit from '../credit';
+import AssignmentList from './assignment-list'
 
-import AssignmentList from './assignment-list';
-
-import { makeTitle } from '@/constants/metadata';
+import { makeTitle } from '@/constants/metadata'
 
 export const metadata = {
   title: makeTitle('Assigments'),
-} satisfies Metadata;
+} satisfies Metadata
 
 export default function AssignmentsPage() {
   return (
     <main>
       <AssignmentList />
-      <Credit className="mt-6" />
     </main>
-  );
+  )
 }

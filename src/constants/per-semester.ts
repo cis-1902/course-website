@@ -1,4 +1,4 @@
-export const STAFF_IMAGE_FOLDER = '/images/staff';
+export const STAFF_IMAGE_FOLDER = '/images/staff'
 
 export const STAFF = [
   {
@@ -37,13 +37,8 @@ export const STAFF = [
       "Hi! I'm a senior majoring in Economics and CIS. I enjoy eating good food and playing all types of games (board games, card games, video games). Feel free to reach out for anything!",
     image: 'andrew.png',
   },
-] as const;
+] as const
 
-export const DAY = 'Wednesdays from 5:15 to 6:45pm';
+export const DAY = 'Wednesdays from 3:30 to 5pm'
 
-export const LOCATION = 'Towne 311';
-
-export const CLASS_RECORDINGS_URL =
-  'https://drive.google.com/drive/folders/1Q6V6h65Y0gxa30bZ8iYG1UGGYSga5KoO?usp=drive_link';
-export const LIVE_CODE_URL =
-  'https://github.com/cis-1962/live-code/tree/main/2024a';
+export const LOCATION = 'Towne 337'
