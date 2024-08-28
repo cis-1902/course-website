@@ -1,3 +1,3 @@
 [submodule "src/course-content"]
 	path = src/course-content
-	url = git@github.com:cis-1962/course-content.git
+	url = https://github.com/cis-1902-202/course-content
