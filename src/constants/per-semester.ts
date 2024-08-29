@@ -34,8 +34,8 @@ export const STAFF = [
       time: 'TBD',
     },
     description:
-      "TBD",
-    image: 'andrew.png',
+      "Hi! I'm Roshan, a sophomore studying Computer Science and Finance. I like shopping vinyls and playing soccer in my free time. On campus, I'm involved with Penn Moviegoers and Hack4Impact. Feel free to reach out for anything!",
+    image: 'roshan.png',
   },
 ] as const
 
