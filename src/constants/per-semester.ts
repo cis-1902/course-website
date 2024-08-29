@@ -2,39 +2,39 @@ export const STAFF_IMAGE_FOLDER = '/images/staff'
 
 export const STAFF = [
   {
-    name: 'Thomas Shaw',
+    name: 'Tuneer Roy',
     role: 'Lecturer',
-    email: 'tlshaw@sas.upenn.edu',
+    email: 'tuneer@seas.upenn.edu',
     oh: {
       location: 'Levine 3 Bump Space',
-      time: 'Monday 8-10pm',
+      time: 'Wednesday 12-1:30pm',
     },
     description:
-      "Hi! I'm Thomas, an undergrad junior in the DMD program at Penn. I also help run the UPenn SIGGRAPH club, which you should definitely check out if you have any interest in graphics tech!",
-    image: 'thomas.png',
+      "Hey! I'm Tuneer, a senior studying CS. I used to teach JavaScript and was formerly a team lead for Penn Mobile @ Penn Labs, so if the app ever breaks... it wasn't me.",
+    image: 'tuneer.jpg',
   },
   {
-    name: 'Marcel Kida',
+    name: 'Vikram Singh',
     role: 'TA',
-    email: 'mkida@wharton.upenn.edu',
+    email: 'singhvik@seas.upenn.edu',
     oh: {
-      location: 'Location TBD',
-      time: 'Time TBD',
+      location: 'Levine 601',
+      time: 'Tuesday 5-6:30pm',
     },
     description:
-      "I'm a junior in M&T. I like playing volleyball and rock climbing. Let's talk anything about design, fashion, or tech!",
-    image: 'marcel.jpeg',
+      "Hi! I’m Vikram, a CS submat from Hong Kong. I finished my undergrad last spring and I love sports (F1/tennis), house music, and YouTube rabbit holes.",
+    image: 'vikram.jpg',
   },
   {
-    name: 'Andrew Jiang',
+    name: 'Roshan Bellary',
     role: 'TA',
-    email: 'ajay54@sas.upenn.edu',
+    email: 'rbellary@seas.upenn.edu',
     oh: {
-      location: 'Levine 601 bump space',
-      time: 'Thursday 7-8pm',
+      location: 'TBD',
+      time: 'TBD',
     },
     description:
-      "Hi! I'm a senior majoring in Economics and CIS. I enjoy eating good food and playing all types of games (board games, card games, video games). Feel free to reach out for anything!",
+      "TBD",
     image: 'andrew.png',
   },
 ] as const
