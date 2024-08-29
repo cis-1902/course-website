@@ -7,114 +7,83 @@ export const metadata = {
 
 ## 🖌️ Code style
 
-Code style is extremely important when developing code that lasts. This is especially important with JavaScript because the interpreter is _very tolerant_ and will allow a great deal of syntactic mistakes to pass undetected when code is executed. JS developers must exhibit great discipline in writing idiomatic code that is easily readable to all other developers.
+Code style is important because it makes your code more readable and maintainable. Most projects you work on will be with others and having a consistent and clean code style will make it easier for everyone to understand the codebase.
 
-Because of this, we're going to be adhering to a style guide for code written in this class. If you ever go out and write code professionally, you would do well to adhere to a structured style guide as well.
-
-<Alert type="danger">
-  For every ESLint error, 1 point will be deducted. Make sure to lint and format
-  your code!
-</Alert>
+In this class, you will be partially graded on your code style and formatting. Thankfully, we have tools that can help us with this!
 
 ## 🛠️ Linting and formatting
 
-In order to do ensure that your JavaScript submissions adhere to this style guide, we will be using [ESLint](http://eslint.org/). You should definitely **check your code style with ESLint before submitting.** If you are not following the rules, 1 style point will be deducted for each type of error.
+In this class, we will be using 3 tools to help with code style:
 
-For each homework, you will have to set up ESLint by following the steps in the [development guide](/development) (if it is not provided in the stub file). Our configuration for ESLint is based on the AirBNB style guide, which (believe it or not) is one of the most consistently used and loved configs out there. We also use a plugin called Unicorn which enables some unique good practice rules.
+- black - a _very_ opinionated code formatter
+- isort - sorts your imports!
+- flake8 - a linter for Python code
 
-Because code readability includes formatting, we give some extra credit for formatting your code. Our setup is configured to use Prettier, a popular formatter for web development.
-
-<Alert mdx type="warning">
-  We will run ESLint on your code using this set of rules, so do not modify the
-  rules yourself _unless_ you want to add extra errorring rules! If you ever
-  encounter an error message from ESLint that you don't understand, look it up
-  and you will find explanatory documentation.
+<Alert mdx type="success">
+  Most of the time, the initial set up for the tools will be done for you, and
+  just by installing the initial dependencies, you just have to run these
+  formatters before you submit. With VSCode, it's also fairly easy to set up
+  automatic formatting on save which will make life a lot easier!
 </Alert>
 
-## ✏️ Syntax
-
-- Use object destructuring and structuring consistently
-
-```ts
-const dog = { name: 'Rocket', age: 10 };
-const cat = { name: 'Meowy', age: 4 };
-const { name, age } = dog;
-
-// ✅ correct - use previous destructuring
-console.log('dog:', name, age);
-// dots are fine as long as we haven't already destructured cat
-console.log('cat:', cat.name, cat.age);
-
-// ❌ incorrect - we've already destructured dog
-console.log('dog:', dog.name, dog.age);
-```
+## ✏️ Some Syntax Guidelines
 
 - Omit boolean literal comparisons
 
-```ts
-// ❌ incorrect
-if (b === true) { ... }
+```python
+# ❌ incorrect
+if b == True:
+  ...
 
-// ✅ correct
-if (b) { ... }
+# ✅ correct
+if b:
+  ...
 ```
 
-- Use ternary expression instead of `if/else` block whenever possible
+- Use ternary expression instead of `if/else` if possible (unless it becomes super hard to read!)
 
-```ts
-// ❌ incorrect
-let a;
-if (b) {
-  a = 3;
-} else {
-  a = 2;
-}
+```python
+# ❌ incorrect
+if b:
+  a = 3
+else:
+  a = 2
 
-// ✅ correct
-let a = b ? 3 : 2;
+# ✅ correct
+a = 3 if b else 2
 ```
 
-- Use `===` and `!==` instead of `==` and `!=`
+- Use lambda functions if you are passing a simple function to another function
 
-- No `{}` and `return` in arrow functions when the body is one line
+```python
+# ❌ incorrect
+def add_5(x):
+  return x + 5
 
-```ts
-// ❌ incorrect
-const func = (a) => {
-  return a;
-};
+result = map(add_5, [1, 2, 3])
 
-// ✅ correct
-const func = (a) => a;
+# ✅ correct
+result = map(lambda x: x + 5, [1, 2, 3])
 ```
 
-- Declare functions with either `=>` or `function`
+- Use f-strings instead of string concatenation
 
-```ts
-// ❌ incorrect (evil)
-const func = new Function('console.log("hello!")');
+```python
+s1 = "Jordan"
+s2 = "Hochman"
 
-// ✅ all correct
-const func = () => {};
-const func = function () {};
-function func() {}
+# ❌ incorrect
+s = s1 + " " + s2 + " is " + str(50) + " years old"
+
+# ✅ correct
+s = f"{s1} {s2} is {50} years old"
 ```
 
-- Use `let` or `const` for variable declaration instead of `var`
-- Use template literals instead of string concatenation
-
-```ts
-const s1 = 'the result of 3 + 3 is';
-const s2 = 6;
-
-// ❌ incorrect
-const newString = s1 + ' ' + s2;
-// ✅ correct
-const newString = `${s1} ${s2}`;
-```
-
-- No leftover `console.log()` statements - definitely use them while debugging though!
+- Feel free to use print statements for debugging, but it's often best practice to leave them out of the final code!
 
 <Alert mdx>
-  There are more rules we didn't mention here that exist in the ESLint configuration. If you encounter one which needs to be broken under a specific circumstance, use `// eslint-disable-next-line <rule-name>` to disable it for whichever line it occurs on. **You must have good reason to do this!**
+  It's completely okay to have your own opinions on code style, but for this
+  class, please try to keep to the guidelines. Even more importantly, make sure
+  you are consistent!
 </Alert>
+```
