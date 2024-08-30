@@ -1,20 +1,20 @@
 import { Metadata } from 'next';
 
-export const TITLE_BASE = 'CIS-1962';
+export const TITLE_BASE = 'CIS-1902';
 
 export function makeTitle(pageName: string) {
   return `${pageName} | ${TITLE_BASE}`;
 }
 
 export const DEFAULT_METADATA = {
-  metadataBase: new URL('https://javascriptclass.org/'),
+  metadataBase: new URL('https://pythonclass.org/'),
   title: TITLE_BASE,
   description:
-    'A CIS Minicourse at UPenn exploring the world of JavaScript. Fall 2023 semester.',
+    'Python Minicourse at UPenn for the Fall 2024 semester.',
   openGraph: {
     type: 'website',
-    title: 'CIS-1962: JavaScript',
-    images: ['/images/meta/og-image.png'],
+    title: 'CIS-1902: Python',
+    // images: ['/images/meta/og-image.png'],
   },
   alternates: {
     canonical: '/',

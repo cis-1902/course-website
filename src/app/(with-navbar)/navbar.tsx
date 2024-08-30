@@ -49,7 +49,7 @@ export default function Navbar() {
       </div>
       <nav>
         <h1 className="font-display text-4xl font-extrabold md:text-5xl">
-          CIS-1905: Python Minicourse
+          CIS-1902: Python Minicourse
         </h1>
         <ul className="-ml-3 mt-2 flex select-none flex-row flex-wrap text-lg tracking-[-0.01em]">
           <NavLink href={SYLLABUS_ROUTE} exact>
