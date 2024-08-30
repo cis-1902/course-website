@@ -30,8 +30,8 @@ export const STAFF = [
     role: 'TA',
     email: 'rbellary@seas.upenn.edu',
     oh: {
-      location: 'TBD',
-      time: 'TBD',
+      location: 'Levine 601',
+      time: 'Friday 12-1:30pm',
     },
     description:
       "Hi! I'm Roshan, a sophomore studying Computer Science and Finance. I like shopping vinyls and playing soccer in my free time. On campus, I'm involved with Penn Moviegoers and Hack4Impact. Feel free to reach out for anything!",
