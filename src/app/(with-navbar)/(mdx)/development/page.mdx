@@ -7,24 +7,102 @@ export const metadata = {
 
 ## 💻 Development
 
-Coming soon!
-{/* There are many ways to write JavaScript, and JavaScript is used for many different purposes, from mobile apps to command line scripts, and of course in the browser. This is a guide for how you can get started writing JS in an environment that will suit you well for this course and future projects you take on in JS.
-
 <Alert mdx type="warning">
 __For Windows users:__
 
-One of the main appeals of web development is that products work on all devices regardless of OS. That being said, there can be some difficulties when developing web apps from different OS's - particularly Windows. This is why we recommend **Windows Subsystem for Linux (WSL)** for development on Windows systems. This is a Microsoft-made tool which allows you to run a lightweight Linux system inside Windows, making your developer experience more convenient.
+This development guide was written with macOS and Linux users in mind. BUT don't worry!
+
+We recommend using **Windows Subsystem for Linux (WSL)** for development on Windows systems. This is a Microsoft-made tool which allows you to run a lightweight Linux system inside Windows, making your developer experience more convenient.
+If you install it, you can follow the rest of this guide as written using WSL.
+
+It's not *required* to use WSL, but it will make your life a LOT easier. It's also going to be harder for the Staff to help you through any issues you run into if you're not using WSL.
 
 </Alert>
 
-If you're on Windows, follow [this guide](https://learn.microsoft.com/en-us/windows/wsl/install) to set up WSL. We also recommend using [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701) to access your Linux subsystem once it is installed. You can then follow the rest of this guide as written using WSL.
+<Alert mdx type="warning">
 
-<Alert mdx type="danger">
-  If you instead choose to develop on Windows without WSL, expect to spend some
-  time debugging and looking around for answers when things don't work quite as
-  expected when installing dependencies and submitting work. The teaching staff
-  will work with you to mitigate these problems!
-</Alert> */}
+### [Pyenv](https://github.com/pyenv/pyenv)
+
+Pyenv is a great tool that allows us to manage multiple Python versions on 
+our device. This is sometimes necessary since different projects might be on
+different versions.
+
+If you have `brew`, you can install`pyenv` with the following command:
+
+```bash
+brew update
+brew install pyenv
+```
+
+If you don't have [`brew`](https://brew.sh/), you should get it 🙃... It's a fairly popular package manager for macOS and Linux systems!
+
+If you choose not to get `brew`, or you're on Windows, you can also use the automatic installer script provided by `pyenv`:
+
+```bash
+curl https://pyenv.run | bash
+```
+
+You'll also want to set up your shell environment for Pyenv, which you can do by adding the following to your shell profile (`.bashrc`, `.zshrc`, etc.):
+
+For `.bashrc`:
+
+```bash
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+```
+
+For `.zshrc`:
+```bash
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+```
+
+After you've added this to your shell profile, you'll need to reload your shell profile by running `source ~/.bashrc` or `source ~/.zshrc`.
+
+Note that these instructions are from a [section on the pyenv README](https://github.com/pyenv/pyenv?tab=readme-ov-file#set-up-your-shell-environment-for-pyenv),
+and they have more information on setting up `pyenv` for different shells, including if you would like to add these commands to your shell profile automatically.
+
+### Poetry
+
+In this class, we will be using `poetry` as our package manager. It's much younger than `pip`, which is the default package manager for Python, but it's much more powerful, and in my opinion, much easier to use.
+
+To install `poetry`, you can use the following command:
+
+```bash
+curl -sSL https://install.python-poetry.org | python3 -
+```
+
+<Alert mdx>
+If you are using Windows and not using WSL (or you just want more advanced installation options!), you can checkout the [Poetry installation guide](https://python-poetry.org/docs/#installing-with-the-official-installer) for more information.
+</Alert>
+
+In this class, all the assignments will have a `pyproject.toml` file that will specify the dependencies for the project. You can install these dependencies by running `poetry install` in the directory where the `pyproject.toml` file is located.
+During the assignment, you might want to use more dependencies than originally specified, and you can do that by running `poetry add <package-name>`.
+
+During these assignments, you should also run `poetry shell` to activate the virtual environment that `poetry` creates for you. This will allow you to run the scripts you write in the assignment.
+
+### Venv (optional information)
+
+This will not be used in this class, but it's good to know about since it's fairly popular still. It's a module provided by Python that enables virtual environment creation. The main commands to know are:
+
+```bash
+# create the env
+python3 -m venv {name_of_virtual_environment}
+
+# activate the env (similar to poetry shell)
+source {name_of_virtual_environment}/bin/activate
+
+# once you're done with the env
+deactivate
+```
+
+Note that there are SOOOOO many other ways to manage virtual environments including Pipenv, conda, and more. We're just going to be using `poetry` in this class, but most of the other options are also quite similar.
+
+<Alert mdx>
+Check out this funny StackOverflow [post](https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe?noredirect=1&lq=1) that was made over 7 years ago about the different virtual environment tools in Python. It's still relevant today!
+</Alert>
 
 ## 📝 Picking a code editor
 
