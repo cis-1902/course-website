@@ -5,12 +5,17 @@ export const metadata = {
   title: makeTitle('Development'),
 };
 
+## 📝 Picking a code editor
+
+In this class, we recommend using **VSCode** as your code editor. If you want to use a different editor, that's totally fine, but we may not be able to help you with specific issues you run into.
+Another popular editor that is specific to Python is **PyCharm**.
+
 ## 💻 Development
 
 <Alert mdx type="warning">
 __For Windows users:__
 
-This development guide was written with macOS and Linux users in mind. BUT don't worry!
+This development guide was written with macOS and Linux users in mind. 
 
 We recommend using **Windows Subsystem for Linux (WSL)** for development on Windows systems. This is a Microsoft-made tool which allows you to run a lightweight Linux system inside Windows, making your developer experience more convenient.
 If you install it, you can follow the rest of this guide as written using WSL.
@@ -19,9 +24,7 @@ It's not *required* to use WSL, but it will make your life a LOT easier. It's al
 
 </Alert>
 
-<Alert mdx type="warning">
-
-### [Pyenv](https://github.com/pyenv/pyenv)
+### Pyenv
 
 Pyenv is a great tool that allows us to manage multiple Python versions on 
 our device. This is sometimes necessary since different projects might be on
@@ -34,7 +37,7 @@ brew update
 brew install pyenv
 ```
 
-If you don't have [`brew`](https://brew.sh/), you should get it 🙃... It's a fairly popular package manager for macOS and Linux systems!
+If you don't have `brew`, you should [get it](https://brew.sh/) 🙃... It's a fairly popular package manager for macOS and Linux systems!
 
 If you choose not to get `brew`, or you're on Windows, you can also use the automatic installer script provided by `pyenv`:
 
@@ -89,10 +92,10 @@ This will not be used in this class, but it's good to know about since it's fair
 
 ```bash
 # create the env
-python3 -m venv {name_of_virtual_environment}
+python3 -m venv {whatever_you_want_to_name_your_env}
 
 # activate the env (similar to poetry shell)
-source {name_of_virtual_environment}/bin/activate
+source {whatever_you_want_to_name_your_env}/bin/activate
 
 # once you're done with the env
 deactivate
@@ -103,8 +106,3 @@ Note that there are SOOOOO many other ways to manage virtual environments includ
 <Alert mdx>
 Check out this funny StackOverflow [post](https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe?noredirect=1&lq=1) that was made over 7 years ago about the different virtual environment tools in Python. It's still relevant today!
 </Alert>
-
-## 📝 Picking a code editor
-
-In this class, we recommend using **VSCode** as your code editor. If you want to use a different editor, that's totally fine, but we may not be able to help you with specific issues you run into.
-Another popular editor that is specific to Python is **PyCharm**.
