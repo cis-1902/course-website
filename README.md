@@ -8,7 +8,7 @@ Make sure to `npm install`, then run a dev server with `npm run dev` and test a 
 
 ## CI/CD
 
-[![Deploy site to Pages](https://github.com/cis-1902/course-website/actions/workflows/nextjs.yml/badge.svg)](https://github.com/cis-1902/course-website/actions/workflows/nextjs.yml)
+[![Deploy site to Pages](https://github.com/cis-1902-202/course-website/actions/workflows/nextjs.yml/badge.svg)](https://github.com/cis-1902-202/course-website/actions/workflows/nextjs.yml)
 
 The `deploy` action creates a new build every day and uploads it to the Penn servers.
 
