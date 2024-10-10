@@ -6,7 +6,7 @@ export const STAFF = [
     role: 'Lecturer',
     email: 'tuneer@seas.upenn.edu',
     oh: {
-      location: 'Levine 3 Bump Space',
+      location: 'Levine 501',
       time: 'Wednesday 12-1:30pm',
     },
     description:
