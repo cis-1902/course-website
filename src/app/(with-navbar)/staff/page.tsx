@@ -1,14 +1,14 @@
-import { Metadata } from 'next';
-import Image from 'next/image';
+import { Metadata } from 'next'
+import Image from 'next/image'
 
-import EmailCopyButton from './email-copy-button';
+import EmailCopyButton from './email-copy-button'
 
-import { makeTitle } from '@/constants/metadata';
-import { STAFF, STAFF_IMAGE_FOLDER } from '@/constants/per-semester';
+import { makeTitle } from '@/constants/metadata'
+import { STAFF, STAFF_IMAGE_FOLDER } from '@/constants/per-semester'
 
 export const metadata = {
   title: makeTitle('Staff'),
-} satisfies Metadata;
+} satisfies Metadata
 
 export default function StaffPage() {
   return (
@@ -29,7 +29,12 @@ export default function StaffPage() {
             </h2>
             <div className="font-medium opacity-50">{role}</div>
             <h4 className="mt-2">
-              OH: <b>{`${oh.time}, ${oh.location}`}</b>
+              {oh.map((slot) =>
+                <div key={slot.time}>
+                  <b>{`${slot.time}, ${slot.location}`}</b>
+                  <br />
+                </div>
+              )}
             </h4>
             <p className="mt-2 tracking-[0.01em]">{description}</p>
             <div className="mt-1 flex items-center gap-1">
@@ -43,7 +48,8 @@ export default function StaffPage() {
             </div>
           </figcaption>
         </figure>
-      ))}
-    </main>
-  );
+      ))
+      }
+    </main >
+  )
 }
